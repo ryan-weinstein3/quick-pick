@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Quick Pick</title>
+		<style>
+			body {text-align:center; font-size:20px;}
+			h1 {font-size:40px;}
+		</style>
+	</head>
+	<body>
+		<h1>Quick Pick</h1>
+		<script>
+			var winning_numbers = prompt("Enter the winning numbers, separated by a space", "7 17 29 35 45").split(" ");
+			var lucky_ball = prompt("Enter the lucky ball number", 17);
+			var rand_numbers = [];
+			for (let i = 0; i < 5; i++) {
+				rand_numbers.push(Math.floor(Math.random() * 48) + 1);
+			}
+			rand_numbers.sort();
+			var rand_lucky = Math.floor(Math.random() * 18) + 1;
+			document.write("The quick pick numbers are: ");
+			for (let j = 0; j < 5; j++) {
+				document.write(rand_numbers[j] + " ");
+			}
+			document.write("</br>");
+			document.write("The lucky ball number is: " + rand_lucky + "</br></br>");
+			document.write("The winning numbers are: ");
+			for (let k = 0; k < 5; k++) {
+				document.write(winning_numbers[k] + " ");
+			}
+			document.write("</br>");
+			document.write("The lucky ball number is: " + lucky_ball + "</br></br>");
+			
+		</script>
+	</body>
+</html>
