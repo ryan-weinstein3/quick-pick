@@ -15,7 +15,7 @@
 			for (let i = 0; i < 5; i++) {
 				rand_numbers.push(Math.floor(Math.random() * 48) + 1);
 			}
-			rand_numbers.sort();
+			rand_numbers.sort(function(a, b) {return a > b ? 1 : -1});
 			var rand_lucky = Math.floor(Math.random() * 18) + 1;
 			document.write("The quick pick numbers are: ");
 			for (let j = 0; j < 5; j++) {
