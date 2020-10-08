@@ -29,7 +29,59 @@
 			}
 			document.write("</br>");
 			document.write("The lucky ball number is: " + lucky_ball + "</br></br>");
-			
+			var count = 0;
+			for (let m = 0; m < 5; m++) {
+				for (let n = 0; n < 5; n++) {
+					if (winning_numbers[m] == rand_numbers[n]) {
+						count++;
+					}
+				}
+			}
+			var payout = 0;
+			if (rand_lucky == lucky_ball) {
+				switch(count) {
+					case 0:
+						payout = 4;
+						break;
+					case 1:
+						payout = 6;
+						break;
+					case 2:
+						payout = 25;
+						break;
+					case 3:
+						payout = 150;
+						break;
+					case 4:
+						payout = 5000;
+						break;
+					case 5:
+						payout = "7000 a week for life";
+						break;
+				}
+			}
+			else {
+				switch(count) {
+					case 0:
+						payout = 0;
+						break;
+					case 1:
+						payout = 0;
+						break;
+					case 2:
+						payout = 3;
+						break;
+					case 3:
+						payout = 20;
+						break;
+					case 4:
+						payout = 200;
+						break;
+					case 5:
+						payout = "25000 a year for life";
+						break;
+				}
+			document.write("Payout: $" + payout + "</br>");
 		</script>
 	</body>
 </html>
